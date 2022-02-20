@@ -8,7 +8,7 @@ function c() {
     document.getElementById('point').value = point;
     const cgpa = point / credit;
    
-    return document.getElementById('showResult').innerHTML = cgpa;
+    return document.getElementById('showResult').innerHTML = cgpa.toFixed(2);
 }
 
 function reset(){
