@@ -1,6 +1,5 @@
 
-$('#submit').click(
-function c() {
+function submit(){
     const credit = $('#credit').val();
     const grade = $('#grade').val();
 
@@ -8,14 +7,20 @@ function c() {
 
     $('#point').val(point);
     const cgpa = point / credit;
-   
+    
     return $('#showResult').text(cgpa.toFixed(2));
 }
-)
+
 function reset(){
     const credit = $('#credit').val("")
     const grade = $('#grade').val("")
     const point = $('#point').val("")
-    return {credit, grade, point};
+    const showResult = $('#showResult').text('')
+    return {credit, grade, point, showResult};
 }
 
+$(document).ready(function() {
+    
+    $('#reset').click(reset);
+    $('#submit').click(submit);
+  });
