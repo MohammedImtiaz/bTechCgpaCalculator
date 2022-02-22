@@ -1,22 +1,21 @@
 
+$('#submit').click(
 function c() {
-    const credit = document.getElementById('credit').value;
-    const grade = document.getElementById('grade').value;
+    const credit = $('#credit').val();
+    const grade = $('#grade').val();
 
     const point = credit * grade;
 
-    document.getElementById('point').value = point;
+    $('#point').val(point);
     const cgpa = point / credit;
    
-    return document.getElementById('showResult').innerHTML = cgpa.toFixed(2);
+    return $('#showResult').text(cgpa.toFixed(2));
 }
-
+)
 function reset(){
-    const credit = document.getElementById('credit').value = ""
-    const grade = document.getElementById('grade').value = ""
-    const point = document.getElementById('point').value = ""
+    const credit = $('#credit').val("")
+    const grade = $('#grade').val("")
+    const point = $('#point').val("")
     return {credit, grade, point};
 }
 
-c();
-reset();
