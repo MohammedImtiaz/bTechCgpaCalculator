@@ -1,0 +1,22 @@
+#creditTotal, #pointTotal{
+    pointer-events: none;
+
+    background-color: gray;
+    color: white;
+    /* display: none; */
+}
+
+#point{
+    pointer-events: none;
+}
+
+.total{
+    display: none;
+}
+
+#gradeTotalDiv{
+    pointer-events: none;
+    width: 31%;
+    margin: auto;
+    display: none; 
+} 
