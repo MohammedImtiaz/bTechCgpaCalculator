@@ -15,7 +15,7 @@ function submit(){
     newReset();
 }
 
-// full reset
+// full reset, this is only for reset button
 
 function reset(){
 
@@ -44,16 +44,16 @@ function newReset(){
 
     return {c,cr,g,p};
 
-
 }
-
 
 
 $(document).ready(function() {
     
     $('#reset').click(reset);
     $('#submit').click(submit);
+
   });
+
 
 var cm, gm, pm, cgpa, addcm, addgm, addpm;
 var counter = 0;
@@ -64,22 +64,20 @@ $("#addMore").click(function() {
     counter++;
     //console.log(counter)
 
-    // here add using to send the value where counter === 1
+    // here 'add' using to collect and send the value where counter === 1
     addcm = $('#credit').val()
     addgm = $('#grade').val()
 
     if (counter >= 1){
 
 
-
-        //this 'if' work only if 'add more' button is pressed one time, if pressed more 'else' will start
+        //this 'if' will work when 'add more' button is pressed for first time, if pressed more 'else' will start
         if(counter ===1){
             //counter is 1 here
             console.log(`counter is one here ${counter}`)
 
             // sending value to total value box
             $('#creditTotal').val(addcm)
-            //$('#creditTotal').val();
 
             $('#gradeTotal').val(addgm)
 
@@ -100,7 +98,6 @@ $("#addMore").click(function() {
         //this 'esle' start working if 'add more' button is pressed for 2 and more times
         else{       
             //counter is 2 and above here
-            //console.log(counter)
 
             //this is credit part
             addcm = $('#credit').val()
@@ -109,12 +106,10 @@ $("#addMore").click(function() {
             cm = cm *1;
 
             cm = cm + addcm;
-            console.log(cm)
 
             $('#creditTotal').val(cm);
 
     
-
             //this is grade part
             addgm = $('#grade').val()
             gm = $('#gradeTotal').val();
@@ -128,15 +123,12 @@ $("#addMore").click(function() {
             //this is point part
             let credit = $('#credit').val();
             let grade = $('#grade').val()
-
             credit = credit *1;
             grade = grade *1;
 
             let point = credit * grade;
 
             $('#point').val(point);
-
-
 
 
             let ptTotal = $('#pointTotal').val();
@@ -155,5 +147,4 @@ $("#addMore").click(function() {
         }
     }
 
-   
 });
