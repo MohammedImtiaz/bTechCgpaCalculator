@@ -30,6 +30,9 @@ function reset(){
     $('#pointTotal').val('')
 
     $('.total').hide()
+    $('thead').empty()
+    $('#tbody').empty()
+    counter = 0;
 
     console.clear()
   
@@ -67,6 +70,16 @@ $("#addMore").click(function() {
     // here 'add' using to collect and send the value where counter === 1
     addcm = $('#credit').val()
     addgm = $('#grade').val()
+    courseCode = $('#courseCode').val()
+    console.log(courseCode)
+
+    //adding value to table in html
+    $('#table').show()
+    let addtext = "<tr><th scope='row'>"+counter+"</th><td>"+courseCode+"</td><td>"+addcm+"</td><td>"+addgm+"</td></tr>"
+    $('tbody').append(addtext)
+  
+
+
 
     if (counter >= 1){
 

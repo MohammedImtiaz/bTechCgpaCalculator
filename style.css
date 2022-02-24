@@ -10,7 +10,7 @@
     pointer-events: none;
 }
 
-.total{
+.total, #table{
     display: none;
 }
 

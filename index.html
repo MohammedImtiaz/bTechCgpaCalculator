@@ -34,6 +34,14 @@
                 <label for="point"  class="form-label" >Point</label>
                 <input type="number" class="form-control" id="point">
             </div>
+
+            <!-- all button -->
+            <div class="container mt-3" style="width: 500px;" id="btndiv">
+                <button type="submit" id="addMore" class="btn btn-dark">Add More</button>
+                <button type="reset" id="reset" class="btn btn-danger">Reset</button>
+                <button type="submit" id="submit" class="btn btn-primary float-end">Submit</button>
+            </div>
+    
             <!-- adding total cr, grd and pnt button -->
             <div class="total">
                 <div class="mb-3 mt-3">
@@ -54,13 +62,33 @@
             </div>
         </div>
 
-        <div class="container m-auto mt-3" style="width: 500px;">
-            <button type="submit" id="addMore" class="btn btn-dark">Add More</button>
-            <button type="reset" id="reset" class="btn btn-danger">Reset</button>
-            <button type="submit" id="submit" class="btn btn-primary float-end">Submit</button>
-        </div>
+    
+    <!-- result table -->
+    <div class="container">
+        <table class="table table-bordered mt-4" id="table">
+            <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Course Code</th>
+                  <th scope="col">Credit</th>
+                  <th scope="col">Grade</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
 
-    <h2 class="m-2 p-2" id="cgpa">Your CGPA: <span id="showResult"></span></h2>
+                <!-- commented code below is for ref. in javascript -->
+
+                <!-- <tr>
+                  <th scope="row">1</th>
+                  <td>courseCode</td>
+                  <td>credit</td>
+                  <td>grade</td>
+                </tr> -->
+              </tbody>
+        </table>
+
+        <h2 class="m-2 p-2" id="cgpa">Your CGPA: <span id="showResult"></span></h2>
+    </div>
     
     <!-- booststart js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
