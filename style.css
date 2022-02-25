@@ -8,9 +8,10 @@
 
 #point{
     pointer-events: none;
+    display: none;
 }
 
-.total, #table{
+.total, #table, #pointDiv{
     display: none;
 }
 

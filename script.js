@@ -30,8 +30,9 @@ function reset(){
     $('#pointTotal').val('')
 
     $('.total').hide()
-    $('thead').empty()
+    $('thead').hide()
     $('#tbody').empty()
+    $('#tfoot').hide()
     counter = 0;
 
     console.clear()
@@ -54,6 +55,16 @@ $(document).ready(function() {
     
     $('#reset').click(reset);
     $('#submit').click(submit);
+    //export button
+    $("#btnExport").click(function() {
+        let table = document.getElementsByTagName("table");
+        TableToExcel.convert(table[0], { // html code may contain multiple tables so here we are refering to 1st table tag
+           name: `result.xlsx`, // fileName you could use any name
+           sheet: {
+              name: 'Sheet 1' // sheetName
+           }
+        });
+    });
 
   });
 
@@ -63,7 +74,9 @@ var counter = 0;
 
 
 $("#addMore").click(function() {
+    $('thead').show()
     $('.total').show()
+    $('#tfoot').show()
     counter++;
     //console.log(counter)
 
@@ -81,7 +94,7 @@ $("#addMore").click(function() {
 
 
 
-    if (counter >= 1){
+    //if (counter >= 1){
 
 
         //this 'if' will work when 'add more' button is pressed for first time, if pressed more 'else' will start
@@ -103,6 +116,7 @@ $("#addMore").click(function() {
             let cgpa = (pt / addcm).toFixed(2);
 
             $('#showResult').text(cgpa);
+            $('#finalCgpa').text(cgpa);
 
             newReset();
             
@@ -155,9 +169,14 @@ $("#addMore").click(function() {
             let cgpa = (ptTotal / cm).toFixed(2);
 
             $('#showResult').text(cgpa);
+            $('#finalCgpa').text(cgpa);
 
             newReset();
-        }
-    }
 
-});
+            
+        } //else block end
+
+
+    //} //if block end
+
+}); //addmore button function end
