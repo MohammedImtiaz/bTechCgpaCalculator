@@ -7,7 +7,7 @@ This is a personal project to calculate B.Tech CGPA. Grading system of LPU is fo
 # How to use this
 All you have to know your credit per subject and grade.
 
-# LPU grading system
+# Grading system
 | Grade | Point |
 | :---: | :---: |
 | O | 10 |
@@ -21,3 +21,5 @@ All you have to know your credit per subject and grade.
 | F (Fail) | 0 |
 | G (Backlog) | 0 |
 | I (Result Incomplete) | 0 |
+Sum of (credit per subject * grade per subject) = Points
+CGPA = (Points / Sum of Credits)
