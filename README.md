@@ -21,5 +21,7 @@ All you have to know your credit per subject and grade.
 | F (Fail) | 0 |
 | G (Backlog) | 0 |
 | I (Result Incomplete) | 0 |
+
+# Calculation
 Sum of (credit per subject * grade per subject) = Points
 CGPA = (Points / Sum of Credits)
