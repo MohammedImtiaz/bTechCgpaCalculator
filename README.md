@@ -23,5 +23,5 @@ All you have to know your credit per subject and grade.
 | I (Result Incomplete) | 0 |
 
 # Calculation
-Sum of (credit per subject * grade per subject) = Points
-CGPA = (Points / Sum of Credits)
+1. Sum of (credit per subject * grade per subject) = Points
+2. CGPA = (Points / Sum of Credits)
