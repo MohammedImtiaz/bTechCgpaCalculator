@@ -10,7 +10,7 @@ All you have to know your credit per subject and grade.
 # Grading system
 | Grade | Point |
 | :---: | :---: |
-| O | 10 |
+| O (Outstanding) | 10 |
 | A+ | 9 |
 | A | 8 |
 | B+ | 7 |
