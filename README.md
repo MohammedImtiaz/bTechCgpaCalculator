@@ -25,3 +25,5 @@ All you have to know your credit per subject and grade.
 # Calculation
 1. Sum of (credit per subject * grade per subject) = Points
 2. CGPA = (Points / Sum of Credits)
+# Live website link
+https://mohammedimtiaz.github.io/lpucgpacalculator/
