@@ -38,7 +38,6 @@ function newReset(){
 $(document).ready(function() {
     
     $('#reset').click(reset);
-    $('#submit').click(submit);
     //export button
     $("#btnExport").click(function() {
         let table = document.getElementsByTagName("table");
