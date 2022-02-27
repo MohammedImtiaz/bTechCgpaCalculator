@@ -7,10 +7,9 @@
 
 #creditTotal, #pointTotal{
     pointer-events: none;
-
-    background-color: gray;
-    color: white;
-    /* display: none; */
+    background-color: #caf9f9;
+    color: black;
+    
 }
 
 #point{
