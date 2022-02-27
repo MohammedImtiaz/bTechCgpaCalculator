@@ -1,3 +1,10 @@
+
+#logo{
+    margin-left: 1em;
+    width: 30px;
+    height: 30px;
+}
+
 #creditTotal, #pointTotal{
     pointer-events: none;
 
@@ -20,4 +27,19 @@
     width: 31%;
     margin: auto;
     display: none; 
+}
+
+#btndiv{
+    padding-left: 0px;
+}
+
+#inputField{
+    margin-top: 5em;
+}
+
+.mediaIcons img{
+    display: inline-block;
+    margin-right: 1em;
+    width: 20px;
+    height: 20px;
 }

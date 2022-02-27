@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTECH | CGPA | CALCULATOR</title>
+    <title>CGPA CALCULATOR</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- icon -->
+    <link rel="icon" href="./icons/logo.svg">
     <!-- bootstrap css link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- jquery cdn link -->
@@ -13,54 +15,63 @@
 </head>
 
 <body>
-    <div class="container p-2 mt-3" style="width: 500px;">
-        <h1>CGPA CALCULATOR</h1>
-    </div>
-    <!-- input field -->
-        <div class="container" style="width: 500px;">
-            <div class="mb-3">
-                <label for="courseCode" class="form-label">Course Code</label>
-                <input type="text" class="form-control" id="courseCode" placeholder="CSE101">
-            </div>
-            <div class="mb-3">
-                <label for="credit" class="form-label">Credit</label>
-                <input type="number" class="form-control" id="credit" placeholder="4">
-            </div>
-            <div class="mb-3">
-                <label for="grade"  class="form-label">Grade</label>
-                <input type="number" class="form-control" id="grade" placeholder="8">
-            </div>
-            <div class="mb-3 mt-3" id="pointDiv">
-                <label for="point"  class="form-label">Point</label>
-                <input type="number" class="form-control" id="point">
-            </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="./icons/logo.svg" class="d-inline-block align-top logo" id="logo" alt="logo">
+            CGPA CALCULATOR
+        </a>
+        <div class="mediaIcons">
+            <a href="https://www.linkedin.com/in/shahjadaimtiaz/" target="_blank"><img src="./icons/linkedin.svg" alt="linkedin"></a>
+            <a href="https://github.com/MohammedImtiaz" target="_blank"><img src="./icons/github.svg" alt="github"></a>
+            <a href="https://twitter.com/shahjadaimtiaz" target="_blank"><img src="./icons/twitter.svg" alt="twitter"></a>
+        </div>
+    </nav>
 
-            <!-- all button -->
-            <div class="container mt-3"  style="width: 500px;" id="btndiv">
-                <button type="submit" id="addMore" class="btn btn-dark w-25">Add</button>
-                <button type="reset" id="reset" class="btn btn-danger w-25">Reset</button>
-                <button type="submit" id="submit" class="btn btn-primary w-25">Submit</button>
-            </div>
-    
-            <!-- adding total cr, grd and pnt button -->
-            <div class="total">
-                <div class="mb-3 mt-3">
-                    <label for="creditTotal" class="form-label">Total Credit:</label>
-                    <input type="number" class="form-control" id="creditTotal">
-                </div>
-                <div class="md-3">
-                    <label for="pointTotal"  class="form-label" id="pointTotalDiv" >Total Point:</label>
-                    <input type="number" class="form-control" id="pointTotal">
-                </div>
-            </div>
+    <!-- input field -->
+    <div class="container" id="inputField" style="width: 500px;">
+        <div class="mb-3">
+            <label for="courseCode" class="form-label">Course Code</label>
+            <input type="text" class="form-control" id="courseCode" placeholder="CSE101">
         </div>
-            <!-- this div display will always none -->
-        <div id="gradeTotalDiv">
+        <div class="mb-3">
+            <label for="credit" class="form-label">Credit</label>
+            <input type="number" class="form-control" id="credit" placeholder="4">
+        </div>
+        <div class="mb-3">
+            <label for="grade"  class="form-label">Grade</label>
+            <input type="number" class="form-control" id="grade" placeholder="8">
+        </div>
+        <div class="mb-3 mt-3" id="pointDiv">
+            <label for="point"  class="form-label">Point</label>
+            <input type="number" class="form-control" id="point">
+        </div>
+
+        <!-- all button -->
+        <div class="container"  style="width: 500px;" id="btndiv">
+            <button type="submit" id="addMore" class="btn btn-primary w-25">Add</button>
+            <button type="reset" id="reset" class="btn btn-danger w-25">Reset</button>
+        </div>
+
+        <!-- adding total cr, grd and pnt button -->
+        <div class="total">
+            <div class="mb-3 mt-3">
+                <label for="creditTotal" class="form-label">Total Credit:</label>
+                <input type="number" class="form-control" id="creditTotal">
+            </div>
             <div class="md-3">
-                <label for="gradeTotal"  class="form-label">Total Grade</label>
-                <input type="number" class="form-control" id="gradeTotal">
+                <label for="pointTotal"  class="form-label" id="pointTotalDiv" >Total Point:</label>
+                <input type="number" class="form-control" id="pointTotal">
             </div>
         </div>
+    </div>
+        <!-- this div display will always none -->
+    <div id="gradeTotalDiv">
+        <div class="md-3">
+            <label for="gradeTotal"  class="form-label">Total Grade</label>
+            <input type="number" class="form-control" id="gradeTotal">
+        </div>
+    </div>
 
     <!-- result table -->
     <div class="container">
@@ -101,6 +112,5 @@
     <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
 
     <script src="./script.js"></script>
-
 </body>
 </html>

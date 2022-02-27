@@ -25,5 +25,12 @@ All you have to know your credit per subject and grade.
 # Calculation
 1. Sum of (credit per subject * grade per subject) = Points
 2. CGPA = (Points / Sum of Credits)
+
+# Tools
+1. HTML/CSS
+2. Bootstrap
+3. JavaScript
+4. jQuery
+
 # Live website link
 https://mohammedimtiaz.github.io/cgpacalculator/

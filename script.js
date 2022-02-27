@@ -1,20 +1,4 @@
 
-
-function submit(){
-    const credit = $('#credit').val();
-    const grade = $('#grade').val();
-
-    const point = credit * grade;
-
-    console.log(typeof point);
-
-    $('#point').val(point);
-    const cgpa = point / credit;
-    
-    $('#showResult').text(cgpa.toFixed(2));
-    newReset();
-}
-
 // full reset, this is only for reset button
 
 function reset(){
@@ -29,7 +13,7 @@ function reset(){
     $('#gradeTotal').val('')
     $('#pointTotal').val('')
 
-    $('.total').hide()
+    $('.total').slideUp()
     $('thead').hide()
     $('#tbody').empty()
     $('#tfoot').hide()
@@ -72,10 +56,11 @@ $(document).ready(function() {
 var cm, gm, pm, cgpa, addcm, addgm, addpm;
 var counter = 0;
 
+//function for add button
 
 $("#addMore").click(function() {
     $('thead').show()
-    $('.total').show()
+    $('.total').slideDown()
     $('#tfoot').show()
     counter++;
     //console.log(counter)
@@ -88,7 +73,7 @@ $("#addMore").click(function() {
 
     //adding value to table in html
     $('#table').show()
-    let addtext = "<tr><th scope='row'>"+counter+"</th><td>"+courseCode+"</td><td>"+addcm+"</td><td>"+addgm+"</td></tr>"
+    let addtext = `<tr><th scope='row'>${counter}</th><td>${courseCode}</td><td>${addcm}</td><td>${addgm}</td></tr>`
     $('tbody').append(addtext)
   
 
@@ -179,4 +164,5 @@ $("#addMore").click(function() {
 
     //} //if block end
 
-}); //addmore button function end
+}); //add button function end
+
