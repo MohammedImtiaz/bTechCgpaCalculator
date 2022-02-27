@@ -1,5 +1,5 @@
-# bTechCgpaCalculator
-This is a personal project to calculate B.Tech CGPA. Grading system of LPU is followed for this project.
+# CGPA Calculator
+This is a personal project to calculate B.Tech CGPA. 10-scale grading system is followed for this project.
 # Features
 1. Calculate Final CGPA
 2. Download the marksheet in excel format.
@@ -26,4 +26,4 @@ All you have to know your credit per subject and grade.
 1. Sum of (credit per subject * grade per subject) = Points
 2. CGPA = (Points / Sum of Credits)
 # Live website link
-https://mohammedimtiaz.github.io/lpucgpacalculator/
+https://mohammedimtiaz.github.io/cgpacalculator/
